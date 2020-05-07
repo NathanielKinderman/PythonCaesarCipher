@@ -32,3 +32,38 @@ def decryption(text,key):
         else:
             output += char
     return output
+
+
+if __name__ == '__main__':
+
+    print( 
+    """
+    1. Press 1 to Encrypt text \n
+    2. Press 2 to Decrypt text \n
+    3. Press 3 to do both \n
+    """)
+    choice = input('Enter a choice: ')
+        
+    if choice == 1:
+        input_txt = raw_input('Enter the text to encrypt:')
+        key       = input('Enter Key between 1 to 25 :')
+        print ("The encrypted text is : ")
+        print encryption(input_txt, key)
+        
+    elif choice == 2:
+        input_txt = raw_input('Enter the text to decrypt:')
+        key       = input('Enter Key between 1 to 25 :')
+        print "The decrypted text is : "
+        print decryption(input_txt, key)
+
+    elif choice == 3:
+        input_txt = raw_input('Enter the text:')
+        key       = input('Enter Key between 1 to 25 :')
+        
+        print "The encrypted text is : "
+        print encryption(input_txt, key)
+        
+        print "The decrypted text is : "
+        print decryption(input_txt, key)
+    else:
+        print 'Invalid choice'
