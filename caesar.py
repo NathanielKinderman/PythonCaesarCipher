@@ -17,3 +17,18 @@ def encryption(text,key):
         else:
             output += char
     return output
+
+
+def decryption(text,key):
+    #decrypts texts that have beem encrypted
+
+    decrypt_string='zyxwvutsrqponmlkihgfedcba'
+    output = ''
+    
+    for char in text:
+        if char in VALID_STRING:
+            index = decrypt_string.index(str(char))
+            output += decrypt_string[index+key]
+        else:
+            output += char
+    return output
